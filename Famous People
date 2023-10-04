@@ -1,0 +1,34 @@
+CREATE TABLE famous_people (
+id INTEGER PRIMARY KEY, 
+name TEXT,
+famous_reason TEXT
+); 
+
+INSERT INTO famous_people 
+VALUES 
+(1,'Brad Pitt', 'movie star'),
+(2,'Matt Damon', 'movie star'),
+(3,'Heidi Klum', 'movie star'),
+(4,'Beyonce', 'singer'),
+(5,'Andre 3000', 'singer'),
+(6,'JK Rowling', 'author');
+
+CREATE TABLE activities (
+id INTEGER PRIMARY KEY,
+movies TEXT,
+songs TEXT,
+books TEXT
+);
+
+INSERT INTO activities 
+VALUES (1,'Ocean 11', Null, Null),
+(2,'Ocean 12', Null, Null),
+(3,'Batman', Null, Null),
+(4,Null,'Single ladies' , Null),
+(5,Null,'Hey ya', Null),
+(6,Null,Null, 'Harry Potter');
+
+select famous_people.name, activities.movies
+from famous_people
+left join activities on famous_people.id = activities.id
+where activities.movies is not null
