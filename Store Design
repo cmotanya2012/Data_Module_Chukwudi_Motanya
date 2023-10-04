@@ -1,0 +1,26 @@
+CREATE TABLE store (
+id INTEGER PRIMARY KEY,
+name TEXT,
+color TEXT,
+size TEXT,
+price INTEGER 
+);
+
+INSERT INTO store VALUES (1, 'Bike', 'Blue', 'Small', 10);
+INSERT INTO store VALUES (2, 'hat', 'Red', 'Medium', 20);
+INSERT INTO store VALUES (3, 'cap', 'Purple', 'Large', 30);
+INSERT INTO store VALUES (4, 'cat', 'Black', 'Small', 40);
+INSERT INTO store VALUES (5, 'dog', 'green', 'Medium', 10);
+INSERT INTO store VALUES (6, 'laptop', 'yellow', 'Large', 20);
+INSERT INTO store VALUES (7, 'Tv', 'red', 'Small', 30);
+INSERT INTO store VALUES (8, 'phone', 'orange', 'Medium', 40);
+INSERT INTO store VALUES (9, 'Pot', 'yellow', 'Large', 10);
+INSERT INTO store VALUES (10, 'Fan', 'greeb', 'Small', 20);
+INSERT INTO store VALUES (11, 'Chair', 'Blue', 'Medium', 30);
+INSERT INTO store VALUES (12, 'Mask', 'Indigo', 'Large', 40);
+INSERT INTO store VALUES (13, 'Pillow', 'violet', 'Small', 10);
+INSERT INTO store VALUES (14, 'Headset', 'Blue', 'Medium', 20);
+INSERT INTO store VALUES (15, 'sweatshirt', 'Purple', 'Large', 30);
+
+
+select id, name, color, size, sum(price) from store
