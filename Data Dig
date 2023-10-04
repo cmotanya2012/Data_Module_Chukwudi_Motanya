@@ -1,0 +1,17 @@
+-- original data is NBA list on Khan academy 
+
+select avg(Height), max(Height), min(Height) from players
+
+select player, height, weight, age 
+from players
+group by player, height 
+having age > 30
+
+select
+ player,
+ age,
+ CASE
+    when age > 30 THEN 'old ass player'
+    else 'young boi'
+ END AS ranking 
+ FROM players 
